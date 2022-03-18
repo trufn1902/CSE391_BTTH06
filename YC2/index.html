@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng đối tượng Array</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        table,th, td {
+          border: 0.92px solid rgb(112, 17, 202);
+          border-collapse: collapse;
+          height: 30px ;
+          font-weight:normal;
+        }
+    </style>
+</head>
+<body>
+    <form id="array">
+        <h1>Thao tác trên mảng</h1>
+        <table class="table">
+            <tr>
+                <th style="width :30%; ">
+                    <button type="button" onclick="CreateRandomNumber()" style="width:90%; border-radius: 0%;">Tạo mảng</button>
+                </th>
+                <td id="createrondom" style="width:70%"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h5 id="createrondomChanged">Giá trị mảng sau khi xử lý</h5>
+                </td>
+            </tr>
+            <tr >
+                <th colspan="2">
+                        <input type="radio" id="raise" name="fav_language" value="" onchange="Raise()">
+                        <label for="">Sắp xếp tăng</label>
+                        <input type="radio" id="reduction" name="fav_language" value="" onchange="Reduction()">
+                        <label for="">Sắp xếp giảm</label>
+                </th>
+            </tr>
+            <tr >
+                <th colspan="2" id="Addition">
+                    <label for="" >Thêm vào vị trí: </label>
+                    <input id="position" type="number" id="" name=""style="width: 15%;">
+                    <label for="" >Giá trị: </label>
+                    <input id="VaLue" type="number" id="" name="" style="width: 15%;">
+                    <button type="button" onclick="More()">Thêm</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <script src="jscript.js"></script>
+</body>
+</html>
