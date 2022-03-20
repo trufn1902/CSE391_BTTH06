@@ -1,3 +1,14 @@
+function changeStyle(text) {
+    text.classList.add("zoomIn")
+    let changeColor = setInterval(() => {
+        text.classList.toggle("changeColor")
+    }, 200)
+    setTimeout(() => {
+        text.classList.remove("changeColor", "zoomIn")
+        clearInterval(changeColor)
+    }, 5000)
+}
+
 setInterval(() => {
     const date = new Date();
     const hours = date.getHours();
@@ -55,4 +66,7 @@ setInterval(() => {
     } else {
         text[0].innerHTML = "Chào buổi tối";
     }
-}, 1000);
+    if ( (hours == 12 || hours == 17 || hours == 20) && minutes == 00 && seconds == 00 ) {
+        changeStyle(text[0])
+    }
+}, 1000); 

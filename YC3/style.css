@@ -19,3 +19,20 @@ th{
     border: 1px solid #000;
     justify-content: center;
 }
+
+.zoomIn {
+    animation: zoomText 6s ease;
+}
+@keyframes zoomText {
+    0% {
+        font-size: 16px;
+        /* color: black; */
+    }
+    100% {
+        font-size: 34px;
+        /* color: red; */
+    }
+}
+.changeColor{
+    color:red;
+}
