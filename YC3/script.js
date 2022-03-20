@@ -21,38 +21,35 @@ setInterval(() => {
         colon.src = "BTTH_icons/haicham.gif";
     });
 
+    const h1 = document.querySelector(".h1");
+    const h2 = document.querySelector(".h2");
+
     if (hours < 10) {
-        const h1 = document.querySelector(".h1");
-        const h2 = document.querySelector(".h2");
         h1.src = "BTTH_icons/00.gif";
         h2.src = `BTTH_icons/0${hours}.gif`;
     } else {
-        const h1 = document.querySelector(".h1");
-        const h2 = document.querySelector(".h2");
         h1.src = `BTTH_icons/0${Math.floor(hours / 10)}.gif`;
         h2.src = `BTTH_icons/0${hours % 10}.gif`;
     }
 
+    const m1 = document.querySelector(".m1");
+    const m2 = document.querySelector(".m2");
+
     if (minutes < 10) {
-        const m1 = document.querySelector(".m1");
-        const m2 = document.querySelector(".m2");
         m1.src = "BTTH_icons/00.gif";
         m2.src = `BTTH_icons/0${minutes}.gif`;
     } else {
-        const m1 = document.querySelector(".m1");
-        const m2 = document.querySelector(".m2");
         m1.src = `BTTH_icons/0${Math.floor(minutes / 10)}.gif`;
         m2.src = `BTTH_icons/0${minutes % 10}.gif`;
     }
 
+    const s1 = document.querySelector(".s1");
+    const s2 = document.querySelector(".s2");
+
     if (seconds < 10) {
-        const s1 = document.querySelector(".s1");
-        const s2 = document.querySelector(".s2");
         s1.src = "BTTH_icons/00.gif";
         s2.src = `BTTH_icons/0${seconds}.gif`;
     } else {
-        const s1 = document.querySelector(".s1");
-        const s2 = document.querySelector(".s2");
         s1.src = `BTTH_icons/0${Math.floor(seconds / 10)}.gif`;
         s2.src = `BTTH_icons/0${seconds % 10}.gif`;
     }
@@ -66,7 +63,7 @@ setInterval(() => {
     } else {
         text[0].innerHTML = "Chào buổi tối";
     }
-    if ( (hours == 12 || hours == 17 || hours == 20) && minutes == 00 && seconds == 00 ) {
+    if ( (hours == 12 || hours == 17 || hours == 0) && minutes == 00 && seconds == 00 ) {
         changeStyle(text[0])
     }
 }, 1000); 
